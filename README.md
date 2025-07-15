@@ -92,4 +92,4 @@ MIT License — feel free to use and extend!
 📬 Contact
 Author: Abdulrasheed Yusuf
 Email: yusufabdulrasheed200@gmail.com
-LinkedIn/GitHub: @yourusername
+LinkedIn/GitHub: https://www.linkedin.com/in/yusuf-abdulrasheed-adinoyi and https://github.com/yusufAbdulrasheed
