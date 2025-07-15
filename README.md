@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+zoom_board — Web-based Interview Software for Tech Hiring
 
-## Getting Started
+zoom_board is a modern, web-based interview platform designed for tech companies to seamlessly interview and evaluate potential developer hires. Built with Next.js, Clerk for authentication, and Convex for serverless database management, this platform provides real-time video capabilities, screen sharing, meeting scheduling, and more — all in one place.
 
-First, run the development server:
+🚀 Tech Stack
+- Frontend: Next.js
+- Authentication: Clerk
+- Database: Convex
+- Video Calling & Screen Sharing: WebRTC / integrated services
+- UI/UX: TailwindCSS + Headless UI (or similar)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+✨ Features
+👥 For Admins (Tech Recruiters, Hiring Teams)
+🔹 Create Instant Meetings - Quickly start a new interview session on the fly.
+🔹 Schedule Meetings - Schedule interviews in advance with custom titles, descriptions, and time slots.
+🔹 Record Meetings - Record entire sessions for later review.
+🔹 Access & Download Recorded Sessions - All sessions are saved and accessible for later playback and download.
+🔹 Comment on Recorded Sessions - Leave feedback and make collaborative hiring decisions directly on the video timeline.
+🔹 Screen Sharing - Share your screen during interviews for technical demonstrations or task discussions.
+
+👨💻 For Candidates (Developers being interviewed)
+🔸 Join Interview via Link - Securely join an interview using a unique meeting link.
+🔸 Live Coding Environment - Perform live coding tasks to showcase your problem-solving skills.
+🔸 Screen Sharing - Share your screen when needed to demonstrate your work.
+🔸 Engage in Real-time Video Interviews - Communicate directly with the hiring team via secure, real-time video chat.
+
+🛠️ Installation & Setup
+Clone the Repository:
+
 ```
+git clone https://github.com/your-username/devmeet.git
+cd devmeet
+```
+Install Dependencies:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```
+npm install
+```
+Set Up Clerk:
+- Create an account at Clerk.dev
+- Create a Clerk application and copy your API keys
+- Add your Clerk keys to the `.env.local` file:
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
+CLERK_SECRET_KEY=your_secret_key
+```
+Set Up Convex:
+- Install the Convex CLI:
+```
+npm install -g convex
+```
+- Initialize Convex in your project:
+```
+npx convex dev
+```
+- Update `.env.local` with your Convex deployment URL.
+Run the Development Server:
+```
+npm run dev
+```
+Your app should be running at http://localhost:3000
+🧪 Future Improvements (Optional Ideas)
+- AI-assisted candidate evaluation
+- In-app collaborative whiteboard
+- Candidate performance scoring system
+- Integrated calendar sync for scheduling
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📁 Folder Structure (Simplified)
+```
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── constants/
+│   ├── hooks/
+│   ├── actions/
+│   ├── lib/
+├── convex/
+├── public/
+├── styles/
+├── .env.local
+└── README.md
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+📜 License
+MIT License — feel free to use and extend!
 
-## Learn More
+🙌 Acknowledgments
+- Clerk.dev for seamless auth
+- Convex.dev for powerful real-time backend
+- Next.js for blazing-fast frontend development
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📬 Contact
+Author: Abdulrasheed Yusuf
+Email: yusufabdulrasheed200@gmail.com
+LinkedIn/GitHub: @yourusername
