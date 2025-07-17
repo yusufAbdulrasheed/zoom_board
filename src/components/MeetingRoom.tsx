@@ -37,8 +37,8 @@ function MeetingRoom() {
   }
 
   return (
-    <div className="h-[calc(100vh-4rem-1px)]">
-      <ResizablePanelGroup direction="horizontal">
+    <div className="min-h-screen md:h-[calc(100vh-4rem-1px)]">
+      <ResizablePanelGroup direction="vertical">
         <ResizablePanel defaultSize={35} minSize={25} maxSize={100} className="relative">
           {/* VIDEO LAYOUT */}
           <div className="absolute inset-0">
@@ -46,7 +46,7 @@ function MeetingRoom() {
 
             {/* PARTICIPANTS LIST OVERLAY */}
             {showParticipants && (
-              <div className="absolute right-0 top-0 h-full w-[300px] bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+              <div className="absolute right-0 top-0 h-full w-full md:w-[300px] z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
                 <CallParticipantsList onClose={() => setShowParticipants(false)} />
               </div>
             )}

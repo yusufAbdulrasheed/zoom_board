@@ -29,7 +29,7 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6 bg-background/95">
+    <div className="min-h-screen p-4 md:p-6 bg-background/95 overflow-y-auto">
       <div className="w-full max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* VIDEO PREVIEW CONTAINER */}
@@ -40,7 +40,7 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
             </div>
 
             {/* VIDEO PREVIEW */}
-            <div className="mt-4 flex-1 min-h-[400px] rounded-xl overflow-hidden bg-muted/50 border relative">
+            <div className="mt-4 flex-1 min-h-[250px] md:min-h-[400px] rounded-xl overflow-hidden bg-muted/50 border relative">
               <div className="absolute inset-0">
                 <VideoPreview className="h-full w-full" />
               </div>
@@ -57,7 +57,7 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
                 <p className="text-sm text-muted-foreground break-all">{call.id}</p>
               </div>
 
-              <div className="flex-1 flex flex-col justify-between">
+              <div className="flex-1 flex flex-col justify-between mt-6 space-y-6">
                 <div className="spacey-6 mt-8">
                   {/* CAM CONTROL */}
                   <div className="flex items-center justify-between">
